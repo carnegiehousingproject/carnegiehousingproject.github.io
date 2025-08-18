@@ -766,7 +766,20 @@ function fnc_project_color(values, context) {
 
 
 
-function exp_DEODSites_2rule1_eval_expression(context) {
+function exp_DEODSites_3rule1_eval_expression(context) {
+    // "Development Action" = 'CLT Replacement'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.get('Development Action')  == 'CLT Replacement');
+    } else {
+        return (feature.get('Development Action')  == 'CLT Replacement');
+    }
+}
+
+
+function exp_DEODSites_3rule2_eval_expression(context) {
     // "Development Action" = 'Renovate'
 
     var feature = context.feature;
@@ -779,7 +792,7 @@ function exp_DEODSites_2rule1_eval_expression(context) {
 }
 
 
-function exp_DEODSites_2rule2_eval_expression(context) {
+function exp_DEODSites_3rule3_eval_expression(context) {
     // "Development Action" = 'MC'
 
     var feature = context.feature;
@@ -792,7 +805,7 @@ function exp_DEODSites_2rule2_eval_expression(context) {
 }
 
 
-function exp_DEODSites_2rule3_eval_expression(context) {
+function exp_DEODSites_3rule4_eval_expression(context) {
     // "Build Recommendation" = '25/25'
 
     var feature = context.feature;
@@ -805,20 +818,20 @@ function exp_DEODSites_2rule3_eval_expression(context) {
 }
 
 
-function exp_DEODSites_2rule4_eval_expression(context) {
-    // "Build Recommendation" = 'Supportive'
+function exp_DEODSites_3rule5_eval_expression(context) {
+    // "Build Recommendation" = 'BCH'
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.get('Build Recommendation')  == 'Supportive');
+        return (feature.get('Build Recommendation')  == 'BCH');
     } else {
-        return (feature.get('Build Recommendation')  == 'Supportive');
+        return (feature.get('Build Recommendation')  == 'BCH');
     }
 }
 
 
-function exp_DEODSites_2rule5_eval_expression(context) {
+function exp_DEODSites_3rule6_eval_expression(context) {
     // "Build Recommendation" = '60/40'
 
     var feature = context.feature;
@@ -831,33 +844,20 @@ function exp_DEODSites_2rule5_eval_expression(context) {
 }
 
 
-function exp_DEODSites_2rule6_eval_expression(context) {
-    // "Build Recommendation" = '25/Supportive'
+function exp_DEODSites_3rule7_eval_expression(context) {
+    // "Build Recommendation" = 'protect'
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.get('Build Recommendation')  == '25/Supportive');
+        return (feature.get('Build Recommendation')  == 'protect');
     } else {
-        return (feature.get('Build Recommendation')  == '25/Supportive');
+        return (feature.get('Build Recommendation')  == 'protect');
     }
 }
 
 
-function exp_DEODSites_2rule7_eval_expression(context) {
-    // "Build Recommendation" = 'Social Housing'
-
-    var feature = context.feature;
-    
-    if (feature.properties) {
-        return (feature.get('Build Recommendation')  == 'Social Housing');
-    } else {
-        return (feature.get('Build Recommendation')  == 'Social Housing');
-    }
-}
-
-
-function exp_DEODSites_2rule8_eval_expression(context) {
+function exp_DEODSites_3rule8_eval_expression(context) {
     // "Build Recommendation" = '??'
 
     var feature = context.feature;
